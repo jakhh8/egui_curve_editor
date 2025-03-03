@@ -1,3 +1,4 @@
+use eframe::egui;
 use egui_curve_editor::{Curve, CurveEditor};
 
 // TODO: Remove main file

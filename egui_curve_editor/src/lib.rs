@@ -283,6 +283,11 @@ impl<'a> egui::Widget for CurveEditor<'a> {
             state.dragging = None;
         }
 
+        // Desellect?
+        if response.clicked_elsewhere() {
+            state.selected = None;
+        }
+
         // Handle dragging
         if let (Some(index), Some(drag_type)) = (state.selected, state.dragging) {
             // Handle dragging tangents also
